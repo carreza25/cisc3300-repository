@@ -1,0 +1,6 @@
+Elements with semantic meaning are intended to convey meaning by their element type, even if the element is indistinguishable from other elements visually. 
+Block level elements always starts on a new line 
+The anchor element defines a hyperlink, which is used to link from one page to another. 
+Image files can be accessed relative to the HTML file. 
+The compression algorithm for a PNG file is lossless. 
+The form element gives you a set of input elements to collect data from your users. 
