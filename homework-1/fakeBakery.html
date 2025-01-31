@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Knead That Bakery</title>
+    </head>
+    <body style="font-family: 'Courier New', Courier, monospace; background-color: #fcc4cc;">
+        <h1 align="center">Knead That!</h1>
+        <p align="center">Welcome to Knead That, a local NYC bakery based in Manhattan that'll make you say "NEED THAT"
+        <p>
+
+        <h2 align="center">Doughn't You Want Some?</h2>
+        <p align="center">We specialize in the most delicious baked goods in all of NYC! Who doesn't love bread and pastries? We know you "knead" that dough, and honestly, so do we...if you know what I'm saying LOL- so come visit us!
+        </p>
+
+        <div align="center">
+        <img width="612" height="408" src="bakeryImages/bread.jpg" alt="bread">
+
+        <img width="540" height="360" src="bakeryImages/croissant.jpg" alt="croissant">
+
+        <img width="612" height="408" src="bakeryImages/bagel.jpg" alt="bagel">
+        </div>
+
+        <h3>Be in the Mix!</h3>
+        <form onsubmit="myFunction">
+                <label for="firstName">Enter your first name:</label>
+                <input type="text" id="firstName" name="firstName"  />
+                <br>
+
+                <label for="lastName">Enter your last name:</label>
+                <input type="text" id="lastName" name="lastName"  />
+                <br>
+
+                <label for="email">Enter your email:</label>
+                <input type="email" id="email" name="email" required />
+                <br>
+
+                <br> <input type="submit" value="Submit" /> <br>
+        </form>
+
+        <script>
+            function myFunction(e) {
+                e.preventDefault()
+                const formData = new FormData(document.getElementById('form'))
+                console.log(formData)
+            }
+        </script>
+
+    </body>
+</html>
