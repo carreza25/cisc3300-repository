@@ -1,0 +1,4 @@
+Relative positioning moves an element from the position it would be in normal flow. 
+Layout systems set rules and standards for how a layout should flow and position elements in a more systematic way 
+Display defines an element as a flex container 
+CSS grid is a two dimensional CSS layout system 
