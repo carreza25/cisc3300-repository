@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Knead That Bakery</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+        <style>
+
+            .flex-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+   
+           .header {
+                background-color: purple;
+                width: 100%;
+                height: 40px;
+                border: 3px, rgb(175, 96, 243), solid;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin: 0;
+           }
+
+           .links {
+                background-color: plum;
+                width: auto;
+                height: 70%;
+                margin: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-left: 50px;
+                margin-right: 50px;
+                padding-left: 50px;
+                padding-right: 50px;
+                font-family: "Lexend", serif;
+           }
+
+           .links a {
+                color: black;
+                font-family: 'Lobster', cursive;
+                font-size: 20px;
+           }
+
+           body {
+                font-family: 'Courier New', Courier, monospace;
+                background-color: plum;
+           }
+
+           h1 {
+                font-family: 'Lobster', cursive;
+                font-size: 100px;
+                color: white;
+                margin: 0;
+                padding-top: 10px;
+           }
+
+           p {
+                font-family: "Lexend", serif;
+                margin-bottom: 50px;
+           }
+
+           form {
+                font-family: "Lexend", serif;
+           }
+
+           h2 {
+                font-family: 'Lobster', cursive;
+                font-size: 50px;
+                color: white;
+           }
+
+           h3 {
+                font-family: 'Lobster', cursive;
+                font-size: 25px;
+                color: white;
+                margin: 0;
+                margin-top: 50px;
+           }
+
+       </style>   
+
+    </head>
+    <body>
+
+        <div class="flex-container">
+            <div class="header">
+                <div class="links">
+                    <a href="#">Location</a>
+                </div>
+                <div class="links">
+                    <a href="#">Menu</a>
+                </div> 
+                <div class="links">               
+                    <a href="#">About Us</a>
+                </div>
+            </div>
+        </div>
+
+        <h1 align="center">Knead That!</h1>
+        <p align="center">Welcome to Knead That, a local NYC bakery based in Manhattan that'll make you say "NEED THAT"
+        <p>
+
+        <div align="center">
+            <img width="612" height="408" src="bakeryImagesCopy/bread.jpg" alt="bread">
+        </div>
+
+        <h2 align="center">Doughn't You Want Some?</h2>
+        <p align="center">We specialize in the most delicious baked goods in all of NYC! Who doesn't love bread and pastries? We know you "knead" that dough, and honestly, so do we...if you know what I'm saying LOL- so come visit us!
+        </p>
+
+        <div align="center">
+        <img width="540" height="360" src="bakeryImagesCopy/croissant.jpg" alt="croissant">
+        </div>
+
+        <div align="center">
+        <img width="612" height="408" src="bakeryImagesCopy/bagel.jpg" alt="bagel">
+        </div>
+
+        <h3>Be in the Mix!</h3>
+        <form onsubmit="myFunction">
+                <label for="firstName">Enter your first name:</label>
+                <input type="text" id="firstName" name="firstName"  />
+                <br>
+
+                <label for="lastName">Enter your last name:</label>
+                <input type="text" id="lastName" name="lastName"  />
+                <br>
+
+                <label for="email">Enter your email:</label>
+                <input type="email" id="email" name="email" required />
+                <br>
+
+                <br> <input type="submit" value="Submit" /> <br>
+        </form>
+
+        <script>
+            function myFunction(e) {
+                e.preventDefault()
+                const formData = new FormData(document.getElementById('form'))
+                console.log(formData)
+            }
+        </script>
+
+    </body>
+
+</html>
