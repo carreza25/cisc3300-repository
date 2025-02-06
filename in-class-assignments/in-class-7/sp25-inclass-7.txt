@@ -1,0 +1,4 @@
+A CSS framework is a collection of CSS stylesheets that are prepped and ready to use. 
+Bootstrap components are pre-styled UI elements like buttons, forms, navbars, and more, built with HTML, CSS, and JavaScript. 
+Responsive design creates dynamic changes to the appearance of a website, depending on the screen size and orientation of the device being used to view it. 
+The meta tag with viewport attributes is needed to get media queries to work 
