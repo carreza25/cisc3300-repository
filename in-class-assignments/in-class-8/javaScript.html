@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+
+        <script>
+            console.log(1 + '0');
+            
+            let stringNumberOutput = "Even though 1+0=1, the output is 10 because it 'added' (concatenated) 1 and 0, since 1 is an integer and 0 is a string (different data types). They will just be printed next to each other because JavaScript will convert 1 into a string due to juggling/type coerion."
+            
+            console.log(stringNumberOutput);
+        </script>
+
+        <script>
+            console.log(Number(true))
+            console.log(Number(false))
+
+            let numberOutput = "The 'true' output is assigned the binary number 1 and the 'false' output is assignment the binary number 0."
+            
+            console.log(numberOutput);
+        </script>
+
+        <script>
+            console.log(Boolean(1))
+            console.log(Boolean(0))
+            console.log(Boolean("0"))
+
+            let booleanOutput = "As referenced above, the binary number 1 is equal to the 'true' output of a bool, and the binary number 0 is equal to the 'false' output of a bool. The string '0' has a 'true' output because only empty strings will have a 'false' output, so even though it is a 0, it's technically just being treated as a character, making this string not empty (true)."
+
+            console.log(booleanOutput);
+        </script>
+    </head>
+    <body>
+
+        <img src="consoleLog/consoleLogScreenshot.png" alt="consoleLog">
+  
+    </body>
+
+    <style>
+
+        img{   
+            max-width: 100%;
+            height: auto;
+        }
+
+    </style>
+</html>
