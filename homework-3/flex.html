@@ -1,0 +1,49 @@
+<html>
+
+    <head>
+
+        <title>Flexbox</title>
+
+        <style>
+
+            .flex-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .flex-item {
+                width: 100px;
+                height: 100px;
+                background-color: lightblue;
+                margin: 5px;
+            }
+
+            @media screen and (max-width: 499px) {
+                .flex-container {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+
+            @media screen and (min-width: 500px) {
+                .flex-container {
+                    flex-direction: row;
+                }
+            }
+            
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="flex-container">
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+        </div>
+
+    </body>
+
+</html>
