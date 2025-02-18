@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Events</title>
+    </head>
+    <body>
+        <div id="event-listener">
+            initial text
+        </div>
+
+        <script>
+            document.getElementById('event-listener').addEventListener('click', function (e) {
+                this.textContent = 'added text!';
+                this.setAttribute('style', 'background-color: yellow;');
+            });
+        </script>
+    </body>
+</html>
