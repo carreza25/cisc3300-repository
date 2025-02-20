@@ -1,0 +1,6 @@
+jQuery is a lightweight, "write less, do more", JavaScript library.
+jQuery makes our lives easier when doing common HTML/CSS/JS tasks. 
+AJAX (Asynchronous JavaScript and XML) allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes. 
+HTTP (Hyper Text Transfer Protocol) how the internet handles communication between clients and servers, is done by requests and responses. 
+JSON (JavaScript Object Notation) is a text-based data format following JavaScript object syntax. 
+API (application programming interface) is a way for two or more computer programs or components to communicate with each other. 

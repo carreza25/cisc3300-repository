@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>AJAX</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+    <body>
+
+        <button id="ajax-get">
+            ajax get
+        </button>
+
+        <script>
+            $('#ajax-get').on('click', function () {
+                $.ajax({
+                    url: 'http://localhost:8888/camille',
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        // the $. ajax() method will automatically parse the JSON and turn it into a JavaScript object for you.
+                        console.log(data);
+                    }
+                });
+            })
+
+        </script>
+    </body>
+</html>
