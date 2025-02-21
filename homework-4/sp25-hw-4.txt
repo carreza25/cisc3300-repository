@@ -17,4 +17,4 @@ What are anonymous functions? Higher order functions? Callback functions? First 
     -Callback functions are passed as an argument to another function to be called later.
     -First class functions treat if-functions like other variables.
 Define objects in JavaScript.
-    -Objects are non-primitive data types that are a collection of properties consisting of key value pairs and are used to represent and organize data (the building blocks of JavaScript). The property is an association between a name (or key) and a value.
+    -Objects are non-primitive data types that are a collection of properties consisting of key value pairs and are used to represent and organize data (the building blocks of JavaScript). The property is an association between a name (or key) and a value. Objects allow you to store multiple related values in a single structure. 
