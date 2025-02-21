@@ -1,0 +1,20 @@
+How does an interpreted programming language differ from a compiled language?
+    -An interpreted programming language is when the source code is not directly translated by the target machine, so an interpreter is needed to read and execute the code (JS, Python, PHP).
+    -A compiled language is when the instructions of the target machine are expressed in the program after compling everything (needs to be compiled) and the source code is translated into machine code (which is undecipherable to humans).
+Contrast dynamically typed programming languages with statically typed ones. And contrast strongly typed programming languages with weakly typed ones.
+    -Dynamically typed programming languages have type checking during runtime (variables can change over its lifetime), but the type is bound to the value and checked at runtime.
+    -Statically typed programming languages have type bound to the variable and checked at compile time.
+    -Strongly typed programming languages have type discipline that's enforced by the compiler.
+    -Weakly typed programming languages can recognize different data types, but doesn't use them too strictly (tries to convert data when it seems reasonable).
+What is the difference between var, let, and const when declaring variables in JS?
+    -When declaring variables in JS: 
+        -var is global and function scoped as well as redeclarable (old school).
+        -let is block scoped and redeclarable.
+        -const is block scoped and not redeclarable/
+What are anonymous functions? Higher order functions? Callback functions? First class functions?
+    -Anonymous functions are functions without a name.
+    -Higher order functions are functions that returns a function or take other functions as arguments.
+    -Callback functions are passed as an argument to another function to be called later.
+    -First class functions treat if-functions like other variables.
+Define objects in JavaScript.
+    -Objects are non-primitive data types that are a collection of properties consisting of key value pairs and are used to represent and organize data (the building blocks of JavaScript). The property is an association between a name (or key) and a value.
