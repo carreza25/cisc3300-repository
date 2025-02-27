@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>colored list</title>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+    <body>
+        <ul>
+            <li>dog</li>
+            <li>cat</li>
+            <li>fish</li>
+            <li>bird</li>
+            <li>hampster</li>
+        </ul>
+
+        <script>
+            const colors = ["red", "orange", "green", "blue", "purple"]
+
+            $('li').on('click', function (e) {
+                const list = $('li').index(this);
+                $(this).css("color", colors[list]);
+            })
+        </script>
+
+    </body>
+</html>

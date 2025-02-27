@@ -1,0 +1,8 @@
+{
+    "name": "Banjo",
+    "breed": "double doodle",
+    "hometown": {
+      "name": "Millersville",
+      "state": "Maryland"
+    }
+}

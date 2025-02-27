@@ -1,4 +1,5 @@
 <?php
+
 require_once 'require.php';
 header('Content-Type: application/json');
 
@@ -7,4 +8,5 @@ $data = array(
 );
 
 echo json_encode($data);
+
 ?> 

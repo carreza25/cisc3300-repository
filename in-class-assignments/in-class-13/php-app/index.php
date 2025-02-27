@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple PHP App</title>
+    <title>Data</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>

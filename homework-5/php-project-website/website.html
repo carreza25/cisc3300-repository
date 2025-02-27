@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Merch</title>
+        <meta charset="UTF-8" />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <style>
+            .clicker {
+                width: 200px;
+                height: 70px;
+                background-color: green;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                font-size: 20px;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                font-family: 'Roboto';
+                font-weight: 500;
+            }
+
+            .items {
+                border: 1px;
+                padding: 10px 20px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                border-radius: 5px;
+                background-color: rgb(16, 100, 163);
+                color: white;
+                width: 200px;
+                text-align: center;
+                font-family: 'Roboto';
+            }
+        </style>
+    </head>
+    <body>
+        <button id="ajax-get" class="clicker">SEE ITEMS!</button>
+        <div id="items-container"></div>
+        <script>
+            $('#ajax-get').on('click', function () {
+                $.ajax({
+                    url: 'http://localhost:8888/items',
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        console.log(data);
+                        $.each(data, function (key, value) {
+                            console.log(value)
+                            $('#items-container').append(`
+                              <div class="items">${value['name']}, ${value['price']}</div>
+                            `)
+                        })
+                    }
+                });
+            })
+        </script>
+    </body>
+</html>

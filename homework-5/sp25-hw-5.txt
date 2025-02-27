@@ -1,0 +1,6 @@
+What is the DOM? What is meant by the DOM tree?
+What is an XSS attack? How do they work? How can you guard against them?
+What is an event in JavaScript? What kind of events can you respond to with code?
+How does a DOM eventListener work? What are the parameters it is expecting?
+What is jQuery? Why use it? How do we load jQuery onto a page?
+What is AJAX? JSON? The HTTP method types and what they do?
