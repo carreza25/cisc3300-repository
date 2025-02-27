@@ -1,0 +1,5 @@
+Variable names start with a $ in php. 
+Associative arrays behave a bit like objects in JS or dictionaries in python.
+A template literal in PHP would be “weclome $name” or “welcome {$name}”.
+php is loosely typed - we don’t set types for variables, they are type juggled. 
+The include/require statement takes all the text/code/markup that exists in the specified file and copies it into the file that uses the include statement. 
