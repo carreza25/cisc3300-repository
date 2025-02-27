@@ -1,6 +1,33 @@
 What is the DOM? What is meant by the DOM tree?
+    -The DOM (Document Object Model) is a programming interface for web documents to represent the page as nodes and objects, so that programs can change the document structure, style, and content.
+    -The DOM tree is how a browser loads a web page (stored in the browsers' memory):
+        -The 4 main types of nodes:
+            -document node (page)
+            -element node (individual elements)
+            -attribute nodes (attributes)
+            -text nodes (text)
 What is an XSS attack? How do they work? How can you guard against them?
+    -An XSS attack (Cross-Site Scripting Attack) is a cyberattach that adds malicious code into a trusted website or application.
+    -An XSS attacks works by infiltrating a page and adding malicious code, which is then is accessed by the user and their information is stolen by the perpetrator.
+    -You can guard against it by rarely having the option to show input that came from a user. You can also have validation inputs in place to strip it of potential malicious intent by removing tags, escaping characters, etc.
 What is an event in JavaScript? What kind of events can you respond to with code?
+    -Events in JavaScript are "things" that happen to HTML elements. They are triggered by an interaction by the user and fired by the browser/HTML (creates code to react to).
+    -Some events that you can respond to with code include scrolling, loading, resizing, and keyboard/mouse interactions.
 How does a DOM eventListener work? What are the parameters it is expecting?
+    -A DOM eventListener works by setting up a function that will be called whenever the specific event is delivered to the target (click, key press, hover, etc.). It will attach an event handler to the specified element.
+    -The parameters it is expecting are event type and function execution.
 What is jQuery? Why use it? How do we load jQuery onto a page?
+    -jQuery is a lightweight, "write less, do more", JavaScript library to make it easier to use JavaScript on your website.
+    -We use it because jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code (designed to simplify HTML, DOM (Document Object Model) manipulation, and event handling, CSS animations, and AJAX).
+    -We load jQuery onto a page via a cdn (Content Delivery Network) within a script tag:
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 What is AJAX? JSON? The HTTP method types and what they do?
+    -AJAX (Asynchronous JavaScript And XML) allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes, so that it is possible to update parts of a web page, without reloading the whole page.
+    -JSON (JavaScript Object Notation) is a text-based data format following JavaScript object syntax that uses human-readable text to store and transmit data objects consisting of attribute–value pairs and arrays (or other serializable values).
+    -HTTP (Hyper Text Transfer Protocol) is how the internet handles communication between clients and servers, is done by requests and responses. It's a protocol for fetching resources such as HTML documents or JSON data. It's also the foundation of any data exchange on the web and uses a client-server protocol, which means requests are initiated by the recipient, usually the web browser.
+        -The HTTP method types include:
+            -GET (should only ever retrieve data)
+            -POST (submits an entity to the specified resource, often causing a change in state or side effects on the server- usually creating a new resource)
+            -PUT (method replaces all current representations of the target resource with the request payload- updates everything for a resource)
+            -PATCH (artially modify a resource)
+            -DELETE (deletes a resource)
