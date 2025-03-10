@@ -1,0 +1,5 @@
+A website can tell a browser to store data about the user and their visit in a text file called a cookie.
+Each time the browser requests another page from that domain, the browser sends the data in the cookie back to the server.
+Browsers only send data in a cookie to a server when it is requesting data from the same domain that set it. 
+Sessions store information about a user and their preferences on the server. 
+Exceptions are thrown - they are intended to be caught. Errors are generally unrecoverable. 
