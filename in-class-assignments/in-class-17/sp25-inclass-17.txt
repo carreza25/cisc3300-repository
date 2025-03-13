@@ -1,0 +1,4 @@
+MySQL (pronounced “sequel”) is a relational database program (one of many) that uses SQL queries. It is the flavor of SQL we will be using. 
+A relational database uses a structure that allows us to identify and access data in relation to another piece of data in the database, these are called relationships. 
+Normalization avoids data duplication by using relationships. 
+We can query our tables for result sets of our data with the select* (* means all) statement.
