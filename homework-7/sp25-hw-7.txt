@@ -1,0 +1,52 @@
+1. What is a class? What is an object? What is OOP? 
+    - A class is a template for creating objects, which needs respective properties and methods (required).
+    - An object is an instance of a class; it’s a reference to the dynamic data, consisting of the data set up by the class using a new keyword.
+    - An OOP (object-oriented programming) is a computer programming model that organizes programs around objects rather than functions.
+
+2. Why use an abstract class in OOP? 
+    - You should use an abstract class in OOP when a class provides some high level functionality, but leaves out certain details to be implemented by derived classes. It allows the parents to create defaults for methods, and it’s not meant to be instantiated, only extended by children classes (a template for templates).
+
+3. What are superglobals in PHP, what are some examples of data they provide? 
+    - Superglobals in PHP are several predefined variables. They are available in all scopes throughout a script.
+    - Some examples of data they provide incldue:
+        - $GLOBALS: an associative array containing references to all variables which are currently defined in the global scope of the script- the variable names are the keys of the array
+        - $_SERVER: an array containing information such as headers, paths, and script locations
+        - $_GET: an associative array of variables passed to the current script via the URL parameters (aka query string)
+        - $_POST: an associative array of variables passed to the current script via the HTTP POST method when using application/x-www-form-urlencoded or multipart/form-data as the HTTP Content-Type in the request
+        - $_FILES: an associative array of items uploaded to the current script via the HTTP POST method
+        - $_COOKIE: an associative array of variables passed to the current script via HTTP Cookies
+        - $_SESSION: an associative array containing session variables available to the current script
+        - $_REQUEST: An associative array that by default contains the contents of $_GET, $_POST and $_COOKIE
+        - $_ENV: an associative array of variables passed to the current script via the environment method
+
+4. What are the two steps to setting up and using a class via namespaces? 
+    - The  two steps to setting up and using a class via namespaces include:
+        1. defining a namespace in the class to be used
+        2a. typing out the full namespace every time you want to use that class: 
+                - $postsModel = new app\models\Post();
+        3b. importing the class into the current namspaces with use keyword:
+                - use app\models\Post;
+                - $postsModel = Post();
+
+5. What is MVC? Detail the different parts. 
+    - MVC (Model, View, Controller) is an architectural/design pattern that separates an application into three main logical components: Model, View, and Controller. Each architectural component is built to handle specific development aspects of an application; it isolates the business logic and presentation layer from each other (serparate concerns)
+        - Model: corresponds to all the data-related logic that the user works with or the data that is being transferred between the View and Controller components/any other business logic-related data., can add or retrieve data from the database, interacts with the database and gives the required data back to the Controller.
+        - View: used for all the UI logic of the application (front end), it generates a user interface for the user, created by the data which is collected by the Model component (these data aren’t taken directly but through the controller), only interacts with the Controller
+        - Controller: enables the interconnection between the Views and the Model so it acts as an intermediary, doesn’t have to worry about handling data logic (just tells the model what to do), processes all the business logic and incoming requests, manipulates data using the Model components, interacts with the View to render the final output, as well as routing for URLs and HTTP verbs.
+
+6. If I had a resource called users in my application that was designed with RESTFUL URI design, what would the URI and HTTP verbs be for: 
+    a. getting all users 
+            URI: /user
+            HTTP verbs: GET
+    b. getting one user 
+            URI: /user/{id}  ({id} is the specific user’s identifier)
+            HTTP verb: GET
+    c. saving a user 
+            URI: /users
+            HTTP verb: POST 
+    d. editing a user 
+            URI: /users/{id} 
+            HTTP verb: PUT (for a complete replacement) or PATCH (for partial update)
+    e. deleting a user 
+            URI: /users/{id}
+            HTTP verb: DELETE
