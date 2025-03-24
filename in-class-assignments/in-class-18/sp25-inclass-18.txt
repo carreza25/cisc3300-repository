@@ -1,0 +1,5 @@
+SQL relationships are the established associations between two or more tables. 
+For every record in the primary table, there are one or more related records in the foreign table: one-to-many (relationship type).
+The join keyword allows you to request data from more than one table.
+The LEFT JOIN keyword returns all records from the left table (table1), and the matching records from the right table.
+An aggregate function is a function that performs a calculation on a set of values, and returns a single value. 
