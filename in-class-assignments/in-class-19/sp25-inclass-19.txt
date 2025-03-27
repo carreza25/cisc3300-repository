@@ -1,0 +1,5 @@
+A built in class that comes packaged with PHP to make it very easy for you to interact with databases, represents and manages the connection to the database: PDOs (PHP Data Objects). 
+The DSN (Data Source Name) is a string that contains information about our connection to the database. 
+In homeworks going forward/final project it will be a deduction of points if you submit your .env file or the information intended to be on it!!! 
+A prepared statement is a parameterized and reusable SQL query which forces the developer to write the SQL command and the user-provided data separately. 
+A SQL Injection is when a hacker tries to run malicious sql code in a database. 
