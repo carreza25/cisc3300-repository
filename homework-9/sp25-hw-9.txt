@@ -1,0 +1,20 @@
+1. What are relationships in SQL? Joins? 
+    - Relationships in SQL are the established associations between two or more tables. They are based on common fields from more than one table, often involving primary and foreign keys. 
+    - Joins in SQL allow you to request data from more than one table. The different types of joins include (INNER) JOIN, LEFT JOIN, RIGHT JOIN, LEFT JOIN EXCLUDING INNER JOIN,  RIGHT JOIN EXCLUDING INNER JOIN, FULL OUTHER JOIN, FULL OUTER JOIN EXCLUDING INNER JOIN.
+        - LEFT JOIN: returns all records from the left table (table1), and the matching records from the right table (table 2)
+        - INNER JOIN: selects records that have matching values in both tables
+
+2. How do joins and relationships interact? 
+    - Joins and relationships interact as joins are generally how you implement relationships between tables/data. Joins use the established relationships between tables to carry out their join function. 
+
+3. What’s a PDO? a DSN? 
+    - A PDO (PHP Data Objects) is a built-in class that comes packaged with PHP to make it very easy to interact with databases. It represents and manages the connection to the database.
+    - A DSN (Data Source Name) is a string containing information about the database connection. 
+
+4. What are prepared statements? Why do we need them? 
+    - Prepared statements are parameterized and reusable SQL queries that force the developer to write the SQL command and the user-provided data separately. 
+    - We need them because they allow SQL commands to execute safely, preventing SQL Injection vulnerabilities.
+
+5. What does an .env file do? 
+    - An .env file is a file containing environment variables (a variable whose value is set outside the program, typically through a functionality built into the operating system).
+    - .env files exist in the environment (OS) that the application is running on, and are used to set variables specific to that environment. It includes information like database passwords, API keys, or authentication tokens to keep safe.
