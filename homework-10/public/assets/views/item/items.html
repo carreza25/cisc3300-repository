@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Knead That!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/assets/styles/users-view.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: plum;
+        }
+
+        h1 {
+            font-family: 'Lobster', cursive;
+            font-size: 100px;
+            color: white;
+            margin: 0;
+            padding-top: 10px;
+        }
+
+        h2 {
+            font-family: 'Lobster', cursive;
+            font-size: 50px;
+            color: white;
+            margin-top: 20px;
+        }
+
+        h3 {
+            font-family: 'Lobster', cursive;
+            font-size: 25px;
+            color: white;
+            margin: 0;
+            margin-top: 50px;
+        }
+
+        #items-container a {
+            color: black;
+            font-weight: 500;
+            font-size: 18px;
+        }
+
+        .margin-ten {
+            margin-top: 10px;
+        }
+
+        .margin-thirty {
+            margin: 30px;
+        }
+
+        .btn-primary, .btn-danger {
+            color: white !important;
+        }
+    </style>  
+</head>
+<body>
+    <div class="d-flex flex-column align-items-center text-center">
+    <h1>Knead That!</h1>
+    <p>Welcome to Knead That, a local NYC bakery based in Manhattan that'll make you say "NEED THAT"</p>
+    <p>Let our menu whisk you away!</p>
+    <p>(we have a lot of BREAD, SWEETS, and DRINK)</p>
+
+    <div class="container mt-3 w-25">
+        <div class="row">
+            <div class="input-group mb-3">
+                <input id="search-text" type="text" class="form-control" placeholder="Search for an item" aria-label="Item search">
+                <button id="search-button" class="btn btn-primary" type="button">Search</button>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h2>What are you craving?</h2>
+        <div id="items-container" class="margin-ten"></div>
+        <a href="/new-item" class="btn btn-success margin-thirty">Add an Item</a>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#search-button").click(function () {
+                const query = $('#search-text').val().trim();
+                const url = query ? `http://localhost:8888/api/items?type=${encodeURIComponent(query)}` : `http://localhost:8888/api/items`;
+                
+                $.ajax({
+                    url: url,
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        $('#items-container').html('');
+
+                        if (data.length === 0) {
+                            $('#items-container').append(`<p class="text-white">No items found.</p>`);
+                            return;
+                        }
+
+                        $.each(data, function (key, value) {
+                            $('#items-container').append(`
+                                <div class="user-container margin-thirty">
+                                    <span class="user">${value['name']}</span>
+                                    <span>
+                                        <a href="/items/${value['id']}" class="btn btn-primary text-white">View</a>
+                                        <a href="delete-item/${value['id']}" class="btn btn-danger text-white">Delete</a>
+                                    </span>
+                                </div>
+                            `);
+                        });
+                    },
+                    error: function () {
+                        $('#items-container').html('<p class="text-danger">Error fetching items. Please try again.</p>');
+                    }
+                });
+            });
+        });
+    </script>
+
+</div>
+</body>
+</html>
